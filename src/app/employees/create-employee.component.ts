@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
+import { Employee } from '../models/employee.model';
 
 
 @Component({
@@ -11,6 +12,18 @@ import { BsDatepickerConfig } from 'ngx-bootstrap/datepicker';
 export class CreateEmployeeComponent implements OnInit {
   datePickerConfig: Partial<BsDatepickerConfig>;
   previewPhoto = false;
+  employee: Employee = {
+      id: null,
+      name: null,
+      gender: null,
+      contactPreference: null,
+      phoneNumber: null,
+      email: null,
+      dateOfBirth: null,
+      department: null,
+      isActive: null,
+      photoPath: null
+    };
 
 
   constructor() {
@@ -27,8 +40,8 @@ export class CreateEmployeeComponent implements OnInit {
     ngOnInit() {
     }
 
-    saveEmployee(empForm: NgForm): void {
-      console.log(empForm);
+    saveEmployee(newEmployee: Employee): void {
+      console.log(newEmployee);
     }
 
     togglePhotoPreview() {
