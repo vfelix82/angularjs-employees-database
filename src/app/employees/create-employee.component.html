@@ -44,11 +44,11 @@
     <div class="form-control">
       <label class="radio-inline">
         <input type="radio" name="contactPreference" required #contactPreference="ngModel"
-        value="email" [(ngModel)]="employee.contactPreference"> Email
+        value="Email" [(ngModel)]="employee.contactPreference"> Email
       </label>
       <label class="radio-inline">
         <input type="radio" name="contactPreference" required #contactPreference="ngModel"
-        value="phone" [(ngModel)]="employee.contactPreference"> Phone
+        value="Phone" [(ngModel)]="employee.contactPreference"> Phone
       </label>
     </div>
     <span class="help-block" *ngIf="contactPreference.touched && contactPreference.invalid">
@@ -61,11 +61,11 @@
     <div class="form-control">
       <label class="radio-inline">
         <input type="radio" name="gender" required #gender="ngModel"
-        value="male" [(ngModel)]="employee.gender"> Male
+        value="Male" [(ngModel)]="employee.gender"> Male
       </label>
       <label class="radio-inline">
         <input type="radio" name="gender" required #gender="ngModel"
-        value="female" [(ngModel)]="employee.gender"> Female
+        value="Female" [(ngModel)]="employee.gender"> Female
       </label>
     </div>
     <span class="help-block" *ngIf="gender.touched && gender.invalid">
@@ -133,8 +133,3 @@ Department is required
 </div>
 </div>
 </form>
-
-Angular Generated Form Model : {{employeeForm.value | json}}
-<br/>
-<br/>
-Our Employee Model : {{ employee | json}}
